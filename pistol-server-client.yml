@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active:
+    - dev
+    
+---
+spring:
+  profiles: dev
+  application:
+    name: pistol-server-client
+server:
+  port: 8081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://182.61.18.96:7001/eureka
+  
+---
+spring:
+  profiles: test
+  application:
+    name: pistol-server-client
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://182.61.18.96:7001/eureka
